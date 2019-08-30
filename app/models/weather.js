@@ -11,4 +11,11 @@ export default class Weather {
     this.city = data.name
     this.kelvin = data.main.temp
   }
+
+  get Template() {
+    let tempF = Math.floor(9 / 5 * (this.kelvin - 273) + 32)
+    return `
+      <h3>${tempF}&deg</h3>
+    `
+  }
 }
