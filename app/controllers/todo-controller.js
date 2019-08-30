@@ -4,7 +4,14 @@ const _todoService = new TodoService()
 
 //TODO Create the render function
 function _drawTodos() {
+	let template = ``
+	let todo = _todoService.Todo
 
+	todo.forEach(t => {
+		template += t.Template
+	})
+
+	document.getElementById('todos').innerHTML = template
 }
 
 //NOTE Keep an eye on your console for any of these errors
@@ -16,6 +23,7 @@ function _drawError() {
 export default class TodoController {
 	constructor() {
 		//TODO Remember to register your subscribers
+		_todoService.addSubscriber('todos', _drawTodos)
 		_todoService.addSubscriber('error', _drawError)
 		_todoService.getTodos()
 	}
@@ -25,6 +33,7 @@ export default class TodoController {
 		var form = e.target
 		var todo = {
 			//TODO build the todo object from the data that comes into this method
+			description: form.todoInput.value
 		}
 		_todoService.addTodo(todo)
 	}
