@@ -62,9 +62,19 @@ export default class TodoService {
 		//		and if you did find one
 		//		change its completed status to whatever it is not (ex: false => true or true => false)
 
+		if (todo) {
+			if (todo.completed == true) {
+				todo.completed = false
+			} else {
+				todo.completed = true
+			}
+		}
 		todoApi.put(todoId, todo)
 			.then(res => {
 				//TODO do you care about this data? or should you go get something else?
+				_state.todos.push(new Todo(todo))
+				_setState("todo", _state.todos)
+				console.log(_state.todos)
 			})
 			.catch(err => _setState('error', err.response.data))
 	}

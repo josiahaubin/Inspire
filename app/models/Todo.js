@@ -8,7 +8,7 @@ export default class Todo {
   get Template() {
     return `
         <div class="form-check w-25 text-white">
-          <input class="form-check-input" type="checkbox" value="${this.completed}" id="todoItem">
+          <input class="form-check-input" type="checkbox" value="${this.completed}" id="todoItem" onchange="app.controllers.todoController.toggleTodoStatus('${this._id}')">
           <label class="form-check-label" for="todoItem">
           ${this.description}
           </label>
