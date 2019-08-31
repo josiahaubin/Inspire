@@ -22,11 +22,19 @@ function _drawError() {
 	console.error('[TODO ERROR]', _todoService.TodoError)
 }
 
+function checkCompleted() {
+	let todo = _todoService.Todo
+
+	todo.forEach(t => {
+		t.checkCompleted()
+	})
+}
 
 export default class TodoController {
 	constructor() {
 		//TODO Remember to register your subscribers
 		_todoService.addSubscriber('todos', _drawTodos)
+		_todoService.addSubscriber('todos', checkCompleted)
 		_todoService.addSubscriber('error', _drawError)
 		_todoService.getTodos()
 	}
