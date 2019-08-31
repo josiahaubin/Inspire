@@ -72,8 +72,7 @@ export default class TodoService {
 		todoApi.put(todoId, todo)
 			.then(res => {
 				//TODO do you care about this data? or should you go get something else?
-				_state.todos.push(new Todo(todo))
-				_setState("todo", _state.todos)
+				_setState("todos", _state.todos)
 				console.log(_state.todos)
 			})
 			.catch(err => _setState('error', err.response.data))

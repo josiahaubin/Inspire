@@ -6,12 +6,15 @@ const _todoService = new TodoService()
 function _drawTodos() {
 	let template = ``
 	let todo = _todoService.Todo
+	let totalCount = 0
 
 	todo.forEach(t => {
 		template += t.Template
+		totalCount++
 	})
 
 	document.getElementById('todos').innerHTML = template
+	document.getElementById('totalCount').innerHTML = totalCount.toString()
 }
 
 //NOTE Keep an eye on your console for any of these errors
