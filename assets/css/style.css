@@ -8,6 +8,9 @@
 #quote {
   color: white;
 }
+#quote:hover .authorShown {
+  display: block
+}
 .weatherRow {
   height: 20vh;
 }
@@ -26,4 +29,7 @@
 .greeting {
   font-size: 30px;
     margin-top: -125px;
+}
+.authorShown{
+  display: none
 }

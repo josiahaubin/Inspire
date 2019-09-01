@@ -7,7 +7,7 @@ export default class Quote {
   get Template() {
     return `
           <h6>${this.quote}</h6>
-					<p>-${this.author}</p>
+					<p class="authorShown">-${this.author}</p>
     `
   }
 }
