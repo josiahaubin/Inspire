@@ -11,7 +11,12 @@ function _drawTodos() {
 	todo.forEach(t => {
 		template += t.Template
 		totalCount++
+
+		if (t.completed == true) {
+			totalCount--
+		}
 	})
+
 
 	document.getElementById('todos').innerHTML = template
 	document.getElementById('totalCount').innerHTML = totalCount.toString()

@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Inspire</title>
+	<script src="https://kit.fontawesome.com/0564598c34.js"></script>
 	<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
 	<link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -13,7 +14,7 @@
 <body id="bg-image">
 	<div class="container-fluid">
 
-		<div class="row">
+		<div class="row offset-8 justify-content-end weatherRow">
 			<div class="col-4">
 				<div id="weather">
 
@@ -21,28 +22,28 @@
 			</div>
 		</div>
 
+		<div class="row clockRow">
+
+		</div>
+
 		<div class="row">
 			<div class="col-6">
+				<div id="todo-error"></div>
+				<h3>Total Todos: <span id="totalCount">--</span></h3>
+				<form onsubmit="app.controllers.todoController.addTodo(event)">
+					<label for="todoInput">New Todo:</label>
+					<input type="text" class="form-control w-25 formStyle" id="todoInput" placeholder="Enter new todo">
+					<button type="submit" class="btn btn-success formButton"><i class="fas fa-check"></i></button>
+				</form>
+				<div id="todos" class="mt-2"></div>
+			</div>
+
+			<div class="col-6 d-flex align-items-end">
 				<div id="quote">
 
 				</div>
 			</div>
-		</div>
 
-		<div class="row">
-			<div class="col">
-				<div>
-					A Todo List
-					<div id="todo-error"></div>
-					<h3>Total Todos: <span id="totalCount">--</span></h3>
-					<form onsubmit="app.controllers.todoController.addTodo(event)">
-						<label for="todoInput">New Todo:</label>
-						<input type="text" class="form-control w-25" id="todoInput" placeholder="Enter new todo">
-						<button type="submit" class="btn btn-success">Add</button>
-					</form>
-					<div id="todos"></div>
-				</div>
-			</div>
 		</div>
 
 	</div>

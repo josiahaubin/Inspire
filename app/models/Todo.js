@@ -7,18 +7,18 @@ export default class Todo {
 
   get Template() {
     return `
-        <div class="form-check w-25 text-white">
+        <div class="form-check w-75 text-white">
           <input class="form-check-input" type="checkbox" value="${this.completed}" id="todoItem" onchange="app.controllers.todoController.toggleTodoStatus('${this._id}')">
           <label class="form-check-label" for="todoItem">
           <span id="${this._id}">${this.description}</span>
           </label>
-          <button class="btn btn-danger" onclick="app.controllers.todoController.removeTodo('${this._id}')">Remove</button>
+          <button class="btn btn-danger ml-1" onclick="app.controllers.todoController.removeTodo('${this._id}')"><i class="fas fa-trash-alt"></i></button>
         </div>
     `
   }
 
   checkCompleted() {
-    if (this.completed == false) {
+    if (this.completed == true) {
       document.getElementById(`${this._id}`).style.textDecoration = "line-through"
     }
   }

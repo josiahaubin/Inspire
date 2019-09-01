@@ -8,3 +8,15 @@
 #quote {
   color: white;
 }
+.weatherRow {
+  height: 20vh;
+}
+.clockRow{
+  height: 50vh;
+}
+.formStyle {
+  display: inline;
+}
+.formButton {
+  margin-top: -5px;
+}
