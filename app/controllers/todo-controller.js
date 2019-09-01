@@ -64,6 +64,12 @@ export default class TodoController {
 		_todoService.removeTodo(todoId)
 	}
 
+	displayTodos() {
+		document.getElementById('todos').style.display = "block"
+	}
 
+	hideTodos() {
+		document.getElementById('todos').style.display = "none"
+	}
 
 }

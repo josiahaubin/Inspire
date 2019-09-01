@@ -14,4 +14,8 @@ export default class QuoteController {
     _qs.addSubscriber("quote", _drawQuote)
     _qs.getRandomQuote()
   }
+
+  nextQuote() {
+    _qs.getRandomQuote()
+  }
 }

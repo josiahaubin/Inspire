@@ -34,7 +34,9 @@
 		<div class="row">
 			<div class="col-6">
 				<div id="todo-error"></div>
-				<h3>Total Todos: <span id="totalCount">--</span></h3>
+				<i class="fas fa-eye mr-1" onclick="app.controllers.todoController.displayTodos()"></i> <i
+					class="fas fa-eye-slash" onclick="app.controllers.todoController.hideTodos()"></i>
+				<h3>Total Active Todos: <span id="totalCount">--</span></h3>
 				<form onsubmit="app.controllers.todoController.addTodo(event)">
 					<label for="todoInput">New Todo:</label>
 					<input type="text" class="form-control w-25 formStyle" id="todoInput" placeholder="Enter new todo">
@@ -47,6 +49,8 @@
 				<div id="quote">
 
 				</div>
+				<button class="btn btn-secondary ml-3" onclick="app.controllers.quoteController.nextQuote()"><i
+						class="fas fa-retweet"></i></button>
 			</div>
 
 		</div>
