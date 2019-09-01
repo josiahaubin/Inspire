@@ -14,16 +14,32 @@ function displayClock() {
     hours = 12
   }
   if (minutes < 10) {
-    minutes = 0 + minutes
+    // @ts-ignore
+    minutes = "0" + minutes
   }
 
   document.getElementById('clock').innerHTML = hours + ":" + minutes + " " + timeOfDay
 }
 
+function displayGreeting() {
+  let currentTime = new Date()
+  let greeting = "Good Morning"
+  let hours = currentTime.getHours()
+
+  if (hours > 12 && hours < 18) {
+    greeting = "Good Afternoon"
+  }
+  if (hours >= 18) {
+    greeting = "Good Evening"
+  }
+
+  document.getElementById('greeting').innerHTML = greeting + " Josiah"
+}
 
 export default class ClockController {
   constructor() {
     displayClock()
     setInterval(displayClock, 1000)
+    displayGreeting()
   }
 }

@@ -2,7 +2,7 @@ import Image from "../models/Image.js"
 
 // @ts-ignore
 const _imgApi = axios.create({
-	baseURL: '//bcw-sandbox.herokuapp.com/api/images',
+	baseURL: 'https://api.nasa.gov/planetary/apod?api_key=GFAcaZscnDs3vp3KXwgzQHtxi34mfuly2g8yPLWe',
 	timeout: 3000
 });
 
