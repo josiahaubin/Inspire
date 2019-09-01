@@ -14,7 +14,7 @@
 .weatherRow {
   height: 20vh;
 }
-.clockRow{
+.clockRow {
   height: 45vh;
 }
 .formStyle {
@@ -30,6 +30,9 @@
   font-size: 30px;
     margin-top: -125px;
 }
-.authorShown{
+.authorShown {
   display: none
+}
+.locationWeather {
+  margin-top: -10px;
 }
