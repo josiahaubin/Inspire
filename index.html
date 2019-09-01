@@ -6,6 +6,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Inspire</title>
+	<link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Questrial&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap" rel="stylesheet">
 	<script src="https://kit.fontawesome.com/0564598c34.js"></script>
 	<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
 	<link rel="stylesheet" href="assets/css/style.css">
@@ -31,12 +34,12 @@
 			</div>
 		</div>
 
-		<div class="row">
-			<div class="col-6">
+		<div class="row todoRow">
+			<div class="col-6 bg-black">
 				<div id="todo-error"></div>
 				<i class="fas fa-eye mr-1" onclick="app.controllers.todoController.displayTodos()"></i> <i
 					class="fas fa-eye-slash" onclick="app.controllers.todoController.hideTodos()"></i>
-				<h3>Total Active Todos: <span id="totalCount">--</span></h3>
+				<h3>Total Active Todo's: <span id="totalCount">--</span></h3>
 				<form onsubmit="app.controllers.todoController.addTodo(event)">
 					<label for="todoInput">New Todo:</label>
 					<input type="text" class="form-control w-25 formStyle" id="todoInput" placeholder="Enter new todo">
