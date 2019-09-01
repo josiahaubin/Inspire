@@ -36,3 +36,9 @@
 .locationWeather {
   margin-top: -10px;
 }
+.weatherIcon {
+  display: inline;
+}
+.temp {
+  margin-top: -45px;
+}

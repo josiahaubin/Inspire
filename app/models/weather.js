@@ -10,12 +10,14 @@ export default class Weather {
 
     this.city = data.name
     this.kelvin = data.main.temp
+    this.icon = data.weather[0].icon
   }
 
   get Template() {
     let tempF = Math.floor(9 / 5 * (this.kelvin - 273) + 32)
     return `
-      <h3 class="text-right">${tempF}&degF</h3>
+      <img class="weatherIcon" src="http://openweathermap.org/img/wn/${this.icon}.png" />
+      <h3 class="text-right temp">${tempF}&degF</h3>
       <p class="text-right locationWeather">-${this.city}</p>
     `
   }
