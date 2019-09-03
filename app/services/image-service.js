@@ -1,8 +1,10 @@
 import Image from "../models/Image.js"
 
+//http://bcw-sandbox.herokuapp.com/api/images
+//https://api.nasa.gov/planetary/apod?api_key=GFAcaZscnDs3vp3KXwgzQHtxi34mfuly2g8yPLWe
 // @ts-ignore
 const _imgApi = axios.create({
-	baseURL: 'https://api.nasa.gov/planetary/apod?api_key=GFAcaZscnDs3vp3KXwgzQHtxi34mfuly2g8yPLWe',
+	baseURL: 'http://bcw-sandbox.herokuapp.com/api/images',
 	timeout: 3000
 });
 
